@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 組件的一般資訊是由下列的屬性集控制。
 // 變更這些屬性的值即可修改組件的相關
 // 資訊。
-[assembly: AssemblyTitle("ConsoleApp1")]
+[assembly: AssemblyTitle("Lance.Curriculum.Study")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ConsoleApp1")]
+[assembly: AssemblyProduct("Lance.Curriculum.Study")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,14 +20,14 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 下列 GUID 為專案公開 (Expose) 至 COM 時所要使用的 typelib ID
-[assembly: Guid("240e45da-0ea2-4106-acfe-1c73060c1dab")]
+[assembly: Guid("698fb727-e4dd-484b-b820-5ab31b7a2865")]
 
-// 組件的版本資訊由下列四個值所組成:
+// 組件的版本資訊由下列四個值所組成: 
 //
 //      主要版本
 //      次要版本
 //      組建編號
-//      修訂
+//      修訂編號
 //
 // 您可以指定所有的值，也可以使用 '*' 將組建和修訂編號
 // 設為預設，如下所示:

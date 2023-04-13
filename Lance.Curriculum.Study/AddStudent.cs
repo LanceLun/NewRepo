@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace Lance.Curriculum.Study
 {
-	internal class Program
-	{
-		static void Main(string[] args)
-		{
-		}
-	}
+    public class AddStudent
+    {
+    }
 }

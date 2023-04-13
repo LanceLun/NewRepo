@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C#練習", "C#練習.csproj", "{0CF06C81-BC31-48B7-879E-04E1935A24E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lance.Curriculum.Study", "..\Lance.Curriculum.Study\Lance.Curriculum.Study.csproj", "{698FB727-E4DD-484B-B820-5AB31B7A2865}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CF06C81-BC31-48B7-879E-04E1935A24E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CF06C81-BC31-48B7-879E-04E1935A24E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CF06C81-BC31-48B7-879E-04E1935A24E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CF06C81-BC31-48B7-879E-04E1935A24E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{698FB727-E4DD-484B-B820-5AB31B7A2865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{698FB727-E4DD-484B-B820-5AB31B7A2865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{698FB727-E4DD-484B-B820-5AB31B7A2865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{698FB727-E4DD-484B-B820-5AB31B7A2865}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {74B1B969-F74E-4B12-891F-39FD858E9E43}
+	EndGlobalSection
+EndGlobal
