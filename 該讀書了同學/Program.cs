@@ -11,10 +11,11 @@ namespace Homework
 	{
 		static void Main(string[] args)
 		{
-			Estore estore = new Estore(0.05);
-			Invoice invoice = estore.IssueInvoice(10000);
-			Console.WriteLine(invoice.Tax);
-			Console.WriteLine(invoice.InclusivePrice);
+			Estore estore = new Estore();
+			Invoice invoice = estore.IssueInvoice(100);
+			string test=Invoice.IssueInvoiceResult(invoice);
+			Console.WriteLine(test);
+
 		}
 	}
 }
