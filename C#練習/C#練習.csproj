@@ -8,8 +8,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Lance.Curriculum.Study\Lance.Curriculum.Study.csproj" />
-  </ItemGroup>
-
 </Project>
