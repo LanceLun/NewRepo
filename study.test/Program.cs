@@ -11,52 +11,50 @@ namespace study.test
 	{
 		static void Main(string[] args)
 		{
-			DateTime began = new DateTime(2023, 4, 19, 9, 30, 0);
-			DateTime over = new DateTime(2023, 4, 19, 20, 30, 0);
-			LeaveTime leave = new LeaveTime(began, over);
-			TimeSpan leaveTime = leave.GetLeaveTime();
-			Console.WriteLine($"實際請假時間為 {leaveTime.TotalHours} 小時");
+			int rows = 5;
+			Func<int, string> left = q => new string('*', q);
+			Func<int, string> right = w => new string('*', w).PadLeft(rows);
+			Func<int, string> mid = a => new string('*', a * 2 - 1).PadLeft(a + rows - 1);
 
+			Get(rows,left,right,mid);
+
+			GetTurnover(rows, left,right,mid);
+
+		}
+
+		public static void GetTurnover(int rows, Func<int, string> left ,Func<int, string> right, Func<int, string> mid)
+		{
+			for(int i=rows; i > 0; i--)
+			{
+				Console.WriteLine(left(i));
+			}
+			for (int i = rows; i > 0; i--)
+			{
+				Console.WriteLine(right(i));
+			}
+			for (int i = rows; i > 0; i--)
+			{
+				Console.WriteLine(mid(i));
+			}
+		}
+
+		public static void Get(int rows,Func<int,string>left, Func<int, string> right, Func<int, string> mid)
+		{
+			for(int i = 1; i <= rows; i++)
+			{
+				Console.WriteLine(left(i));
+			}
+			for(int i = 1;i <= rows; i++)
+			{
+				Console.WriteLine(right(i));
+			}
+			for (int i = 1; i <= rows; i++)
+			{
+				Console.WriteLine(mid(i));
+			}
 		}
 		
 		
 	}
-	public class LeaveTime
-	{
-		private DateTime Start;
-		private DateTime End;
-		private DateTime WorkBegan;
-		private DateTime WorkEnd;
-		private DateTime LunchStart;
-		private DateTime LunchEnd;
-
-        public LeaveTime(DateTime start,DateTime end)
-        {
-			DateTime date= start.Date;
-			WorkBegan = new DateTime(date.Year, date.Month, date.Day,9,0,0);
-			WorkEnd = new DateTime(date.Year,date.Month,date.Day,18,0,0);
-			LunchStart= new DateTime(date.Year, date.Month, date.Day,12,0,0);
-			LunchEnd = new DateTime(date.Year, date.Month, date.Day, 13, 0, 0);
-			if (start >= WorkEnd || end <= WorkBegan)
-			{
-				throw new Exception("時間異常");
-			}
-			if (start < WorkBegan) { start = WorkBegan; }
-			if (end > WorkEnd) { end = WorkEnd; }
-
-			this.Start = start;
-			this.End = end;
-		}
-		public TimeSpan GetLeaveTime()
-		{
-			TimeSpan result=End - Start;
-
-			if(Start.TimeOfDay<LunchEnd.TimeOfDay && End.TimeOfDay > LunchStart.TimeOfDay)
-			{
-				result = result.Subtract(LunchEnd- LunchStart);
-			}
-			return result;
-		}
-    }
 	
 }

@@ -29,9 +29,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "課程練習", "課程練�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lance.DiceGame", "..\Lance.DiceGame\Lance.DiceGame.csproj", "{37770F92-28B2-4EA0-807E-4794247DEA22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lance.DiceGame.App", "..\Lance.DiceGame.App\Lance.DiceGame.App.csproj", "{78F534A1-2476-4EF0-8B26-D0FF65256ECE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lance.DiceGame.App", "..\Lance.DiceGame.App\Lance.DiceGame.App.csproj", "{78F534A1-2476-4EF0-8B26-D0FF65256ECE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "請假時間計算", "..\請假時間計算\請假時間計算.csproj", "{E1C72DBB-534D-44C1-978A-3AB3682015BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "同學成績計算", "同學成績計算", "{7F5E0B57-3FAB-4F86-A72A-D6BB8453E45C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "同學成績計算", "..\同學成績計算\同學成績計算.csproj", "{6E0ADC6E-388B-4A96-AFA5-63A09E67A16A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +95,10 @@ Global
 		{E1C72DBB-534D-44C1-978A-3AB3682015BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1C72DBB-534D-44C1-978A-3AB3682015BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1C72DBB-534D-44C1-978A-3AB3682015BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E0ADC6E-388B-4A96-AFA5-63A09E67A16A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E0ADC6E-388B-4A96-AFA5-63A09E67A16A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E0ADC6E-388B-4A96-AFA5-63A09E67A16A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E0ADC6E-388B-4A96-AFA5-63A09E67A16A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -101,6 +109,7 @@ Global
 		{37770F92-28B2-4EA0-807E-4794247DEA22} = {3B27B432-DC15-473F-9956-9BC9F3B8A9ED}
 		{78F534A1-2476-4EF0-8B26-D0FF65256ECE} = {3B27B432-DC15-473F-9956-9BC9F3B8A9ED}
 		{E1C72DBB-534D-44C1-978A-3AB3682015BE} = {9E9725F5-2014-4919-974F-2075E2A5335E}
+		{6E0ADC6E-388B-4A96-AFA5-63A09E67A16A} = {7F5E0B57-3FAB-4F86-A72A-D6BB8453E45C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {74B1B969-F74E-4B12-891F-39FD858E9E43}
