@@ -19,8 +19,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "delegate委派", "..\delega
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "delegate委派-打折練習", "..\delegate委派-打折練習\delegate委派-打折練習.csproj", "{4D6B213C-9FE6-44B7-A945-9E9CD5C3755A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "員工薪水計算", "..\員工薪水計算\員工薪水計算.csproj", "{4A682CD0-E6BD-4987-A13B-C73B4B919D68}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "骰子遊戲", "骰子遊戲", "{3B27B432-DC15-473F-9956-9BC9F3B8A9ED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "study.test", "..\study.test\study.test.csproj", "{B289C0E4-3748-4DDB-A3F4-49EE2DDFC8C3}"
@@ -75,10 +73,6 @@ Global
 		{4D6B213C-9FE6-44B7-A945-9E9CD5C3755A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D6B213C-9FE6-44B7-A945-9E9CD5C3755A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D6B213C-9FE6-44B7-A945-9E9CD5C3755A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4A682CD0-E6BD-4987-A13B-C73B4B919D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4A682CD0-E6BD-4987-A13B-C73B4B919D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4A682CD0-E6BD-4987-A13B-C73B4B919D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4A682CD0-E6BD-4987-A13B-C73B4B919D68}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B289C0E4-3748-4DDB-A3F4-49EE2DDFC8C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B289C0E4-3748-4DDB-A3F4-49EE2DDFC8C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B289C0E4-3748-4DDB-A3F4-49EE2DDFC8C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
