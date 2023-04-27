@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5D265F5D-0E1C-4BDE-970D-575C1B3D7563}</ProjectGuid>
+    <ProjectGuid>{08AE500A-213B-41C7-8DD0-7AC65BB9501E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>成績計算</RootNamespace>
-    <AssemblyName>成績計算</AssemblyName>
+    <RootNamespace>訂單練習</RootNamespace>
+    <AssemblyName>訂單練習</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,9 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
