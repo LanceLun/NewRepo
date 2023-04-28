@@ -45,7 +45,7 @@
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.Location = new Point(28, 104);
+			label1.Location = new Point(28, 70);
 			label1.Name = "label1";
 			label1.Size = new Size(39, 19);
 			label1.TabIndex = 0;
@@ -54,7 +54,7 @@
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.Location = new Point(28, 180);
+			label2.Location = new Point(28, 131);
 			label2.Name = "label2";
 			label2.Size = new Size(39, 19);
 			label2.TabIndex = 0;
@@ -63,7 +63,7 @@
 			// label3
 			// 
 			label3.AutoSize = true;
-			label3.Location = new Point(48, 264);
+			label3.Location = new Point(28, 191);
 			label3.Name = "label3";
 			label3.Size = new Size(39, 19);
 			label3.TabIndex = 0;
@@ -72,18 +72,20 @@
 			// label4
 			// 
 			label4.AutoSize = true;
-			label4.Location = new Point(481, 411);
+			label4.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			label4.Location = new Point(472, 423);
 			label4.Name = "label4";
-			label4.Size = new Size(54, 19);
+			label4.Size = new Size(72, 25);
 			label4.TabIndex = 0;
 			label4.Text = "總金額";
 			// 
 			// labelTotalPrice
 			// 
 			labelTotalPrice.AutoSize = true;
-			labelTotalPrice.Location = new Point(709, 411);
+			labelTotalPrice.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+			labelTotalPrice.Location = new Point(632, 423);
 			labelTotalPrice.Name = "labelTotalPrice";
-			labelTotalPrice.Size = new Size(74, 19);
+			labelTotalPrice.Size = new Size(106, 25);
 			labelTotalPrice.TabIndex = 0;
 			labelTotalPrice.Text = "totalPrice";
 			// 
@@ -94,16 +96,17 @@
 			dataGridView1.Name = "dataGridView1";
 			dataGridView1.RowHeadersWidth = 51;
 			dataGridView1.RowTemplate.Height = 29;
-			dataGridView1.Size = new Size(567, 344);
+			dataGridView1.Size = new Size(548, 396);
 			dataGridView1.TabIndex = 2;
 			// 
 			// button1
 			// 
-			button1.Location = new Point(177, 308);
+			button1.Font = new Font("Microsoft JhengHei UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+			button1.Location = new Point(28, 252);
 			button1.Name = "button1";
-			button1.Size = new Size(94, 29);
+			button1.Size = new Size(229, 72);
 			button1.TabIndex = 3;
-			button1.Text = "新增";
+			button1.Text = "訂購";
 			button1.UseVisualStyleBackColor = true;
 			button1.Click += button1_Click;
 			// 
@@ -111,7 +114,7 @@
 			// 
 			comboBox1.FormattingEnabled = true;
 			comboBox1.Items.AddRange(new object[] { "台啤", "百威", "雪山" });
-			comboBox1.Location = new Point(106, 96);
+			comboBox1.Location = new Point(106, 70);
 			comboBox1.Name = "comboBox1";
 			comboBox1.Size = new Size(151, 27);
 			comboBox1.TabIndex = 4;
@@ -119,7 +122,7 @@
 			// 
 			// numericUpDown1
 			// 
-			numericUpDown1.Location = new Point(106, 172);
+			numericUpDown1.Location = new Point(106, 131);
 			numericUpDown1.Name = "numericUpDown1";
 			numericUpDown1.Size = new Size(150, 27);
 			numericUpDown1.TabIndex = 5;
@@ -127,7 +130,7 @@
 			// label5
 			// 
 			label5.AutoSize = true;
-			label5.Location = new Point(128, 264);
+			label5.Location = new Point(150, 191);
 			label5.Name = "label5";
 			label5.Size = new Size(43, 19);
 			label5.TabIndex = 6;
@@ -150,7 +153,6 @@
 			Controls.Add(label4);
 			Controls.Add(label1);
 			Name = "Form1";
-			Text = "Form1";
 			Load += Form1_Load;
 			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
 			((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();

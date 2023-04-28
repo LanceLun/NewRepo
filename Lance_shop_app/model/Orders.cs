@@ -14,6 +14,7 @@ namespace Lance_shop_app.model
 		public int TotalPrice { get;private set; }
 		public Orders(Products products, int qty)
 		{
+
 			this.Products = products;
 			Qty = qty;
 			TotalPrice = qty * products.Price;

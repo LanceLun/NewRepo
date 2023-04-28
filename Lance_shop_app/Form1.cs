@@ -67,6 +67,7 @@ namespace Lance_shop_app
 				case "雪山": label5.Text = "50"; break;
 				default: label5.Text = ""; break;
 			}
+
 		}
 		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -80,21 +81,40 @@ namespace Lance_shop_app
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			var selectedProduct = GetProductByName();
-			var qty = (int)numericUpDown1.Value;
-			var order = new Orders(selectedProduct, qty);
-			orders.Add(order);
 
-			// 新增一個 dataGridView1 的 row 來顯示訂單資訊
-			var row = new DataGridViewRow();
-			row.CreateCells(dataGridView1);
-			row.Cells[0].Value = selectedProduct.Name;
-			row.Cells[1].Value = qty;
-			row.Cells[2].Value = selectedProduct.Price;
-			row.Cells[3].Value = order.TotalPrice;
-			dataGridView1.Rows.Add(row);
+			if (string.IsNullOrEmpty(comboBox1.Text))
+			{
+				MessageBox.Show("請選擇商品", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				return;
+			}
+			else if (numericUpDown1.Value <= 0)
+			{
+				MessageBox.Show("數量不得低於0", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				return;
+			}
+			else
+			{
+				var selectedProduct = GetProductByName();
+				var qty = (int)numericUpDown1.Value;
+				var order = new Orders(selectedProduct, qty);
+				orders.Add(order);
 
-			labelTotalPrice.Text = orders.GetOrderTotalPrice().ToString();
+				// 新增一個 dataGridView1 的 row 來顯示訂單資訊
+				var row = new DataGridViewRow();
+				row.CreateCells(dataGridView1);
+				row.Cells[0].Value = selectedProduct.Name;
+				row.Cells[1].Value = qty;
+				row.Cells[2].Value = selectedProduct.Price;
+				row.Cells[3].Value = order.TotalPrice;
+				dataGridView1.Rows.Add(row);
+
+				labelTotalPrice.Text = orders.GetOrderTotalPrice().ToString();
+
+				comboBox1.Text = string.Empty;
+				numericUpDown1.Value = 0;
+				return;
+			}
+
 		}
 	}
 }
