@@ -24,30 +24,30 @@ namespace C_練習
 			int rows = 5;
 			string result;
 			//正
-   //         result=GetTriangle(1, leftTriangle);
-   //         Console.WriteLine(result);
-
-			//result = GetTriangle(1, rightTriangle);
+			//result=GetTriangle(rows, leftTriangle);
 			//Console.WriteLine(result);
 
-			//result = GetTriangle(1, midTriangle);
+			//result = GetTriangle(rows, rightTriangle);
+			//Console.WriteLine(result);
+
+			//result = GetTriangle(rows, midTriangle);
 			//Console.WriteLine(result);
 
 			//反
-			result = GetTriangle(1, leftTriangledesc);
+			result = GetTriangle(rows, leftTriangledesc);
 			Console.WriteLine(result);
 
-			result = GetTriangle(1, rightTriangledesc);
+			result = GetTriangle(rows, rightTriangledesc);
 			Console.WriteLine(result);
 
-			result = GetTriangle(1, midTriangledesc);
+			result = GetTriangle(rows, midTriangledesc);
 			Console.WriteLine(result);
 
 
-			string GetTriangle(int row, Func<int, int, string> func)
+			string GetTriangle(int rows, Func<int, int, string> func)
 			{
 				var result = new StringBuilder();
-				for (int i = row; i <= rows; i++)
+				for (int i = 1; i <= rows; i++)
 				{
 					result.AppendLine(func(i, rows));
 				}

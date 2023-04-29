@@ -23,14 +23,14 @@ namespace Lance_shop_app.model
 
 	public static class OrdersHelper
 	{
-		static public List<(string name,int price, int qty)> GetOrderSum(this List<Orders> orders)
-		{
-			var summary = orders.Where(o => o.Qty > 0)
-				.GroupBy(o => o.Products.Name)
-				.Select(g => (g.Key, g.Sum(o => o.Qty), g.Sum(o => o.TotalPrice)))
-				.ToList();
-			return summary;
-		}
+		//static public List<(string name,int price, int qty)> GetOrderSum(this List<Orders> orders)
+		//{
+		//	var summary = orders.Where(o => o.Qty > 0)
+		//		.GroupBy(o => o.Products.Name)
+		//		.Select(g => (g.Key, g.Sum(o => o.Qty), g.Sum(o => o.TotalPrice)))
+		//		.ToList();
+		//	return summary;
+		//}
 
 		static public int GetOrderTotalPrice(this List<Orders> orders)
 		{
