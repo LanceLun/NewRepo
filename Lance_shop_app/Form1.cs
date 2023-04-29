@@ -17,6 +17,7 @@ namespace Lance_shop_app
     {
         private List<Order> _orders;
         private List<Product> _products;
+        private List<Product> _filterproducts;
 
         public Form1()
         {
@@ -33,6 +34,10 @@ namespace Lance_shop_app
         {
             try
             {
+                // init
+                labelTotalPrice.Text = String.Empty;
+                _orders = new List<Order>();
+
                 // 產品下拉選單           
                 _products = new List<Product>()
                 {
@@ -50,16 +55,50 @@ namespace Lance_shop_app
                 this.cbProduct.SelectedValueChanged += new System.EventHandler(this.cbProduct_SelectedValueChanged);
                 this.cbProduct_SelectedValueChanged(this.cbProduct, new EventArgs());
 
-                // 產品Detail
-                _orders = new List<Order>();
-                this.dGVDetail.DataSourceChanged += new System.EventHandler(this.dgvDetail_DataSourceChanged);
+                // 篩選產品下拉選單
+                _filterproducts = new List<Product>()
+                {
+                  new Product("全部","0", 0),
+                  new Product("台啤","1", 40),
+                  new Product("百威","2", 35),
+                  new Product("雪山","3", 50)
+                };
+                cbFilterProduct.DataSource = _filterproducts;
+                cbFilterProduct.DisplayMember = "Name";
+                cbFilterProduct.ValueMember = "Value";
 
                 // 綁定Submit
                 this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+
+                // 篩選
+                this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "系統初始錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            if (cbFilterProduct.SelectedValue == "0")
+            {
+                DataBind(_orders);
+            }
+            else
+            {
+                var filterProduct = _filterproducts.FirstOrDefault(f => f.Value == cbFilterProduct.SelectedValue);
+                var filterOrders = _orders.Where(o => o.ProductName == filterProduct.Name).ToList();
+
+                if (filterOrders.Count() == 0)
+                {
+                    MessageBox.Show("查無此資料", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    DataBind(filterOrders);
+                }
             }
 
         }
@@ -85,8 +124,8 @@ namespace Lance_shop_app
                 var selectedProduct = _products.FirstOrDefault(p => p.Value == cbProduct.SelectedValue);
                 int qty = (int)numUDCount.Value;
                 Order order = new Order(selectedProduct.Name, selectedProduct.Price, qty);
-                InsertOrder(order);
-                DataBind();
+                _orders.Add(order);
+                DataBind(_orders);
 
                 // Init
                 Init();
@@ -129,30 +168,12 @@ namespace Lance_shop_app
             numUDCount.Value = 0;
         }
 
-        private void DataBind()
+        private void DataBind(List<Order> orders)
         {
-            string jsonOrders = JsonConvert.SerializeObject(_orders);
+            string jsonOrders = JsonConvert.SerializeObject(orders);
             DataTable dtOrders = JsonConvert.DeserializeObject<DataTable>(jsonOrders);
             dGVDetail.DataSource = dtOrders;
-        }
-
-        private void InsertOrder(Order order)
-        {
-            var originOrder = _orders.FirstOrDefault(f => f.ProductName == order.ProductName);
-            // 判斷是否為新增新商品
-            if (originOrder == null)
-            {
-                _orders.Add(order);
-            }
-            else
-            {
-                originOrder.Qty += order.Qty;
-            }
-        }
-
-        private void dgvDetail_DataSourceChanged(object sender, EventArgs e)
-        {
-            labelTotalPrice.Text = _orders.Sum(p => p.TotalPrice).ToString();
+            labelTotalPrice.Text = orders.Sum(p => p.TotalPrice).ToString();
         }
     }
 }
