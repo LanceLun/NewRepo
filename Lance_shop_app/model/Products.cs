@@ -6,15 +6,29 @@ using System.Threading.Tasks;
 
 namespace Lance_shop_app.model
 {
-	public class Products 
+    // 這個應該要叫Product ?
+    /// <summary>
+    /// 產品 (案///可以打summary)
+    /// </summary>
+    public class Product 
 	{
-		//創建商品
+		/// <summary>
+		/// 產品名稱
+		/// </summary>
         public string Name { get; private set; }
+        /// <summary>
+        /// 產品實際值(進資料庫)
+        /// </summary>
+        public string Value { get; private set; }
+        /// <summary>
+        /// 價格
+        /// </summary>
         public int Price { get; private set; }
-		public Products(string name, int price)
+		public Product(string name,string value, int price)
 		{
 			this.Name = name;
 			this.Price = price;
+            this.Value = value;
 		}
 	}
 }
